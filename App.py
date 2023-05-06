@@ -147,10 +147,11 @@ with tab2:
             new_sample = np.concatenate((new_sample[:, [0,1,2, 3, 4, 5, 6,7]], new_sample_ohe), axis=1)
             new_sample = cscaler_loaded.transform(new_sample)
             new_pred = cloaded_model.predict(new_sample)
-            if new_pred==1:
-                st.write('## :green[The Status is Won] ')
-            else:
-                st.write('## :red[The status is Lost] ')
+            print(new_pred)
+            #if new_pred==1:
+                #st.write('## :green[The Status is Won] ')
+            #else:
+               # st.write('## :red[The status is Lost] ')
                 
 st.write( f'<h6 style="color:rgb(0, 153, 153,0.35);">App Created by Ravi chandra Palem</h6>', unsafe_allow_html=True )  
 
