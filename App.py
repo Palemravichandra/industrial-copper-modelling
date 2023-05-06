@@ -148,7 +148,7 @@ with tab2:
             new_sample = cscaler_loaded.transform(new_sample)
             new_pred = cloaded_model.predict(new_sample)
             #st.write(new_pred)
-            if new_pred==1:
+            if new_pred.any()==1:
                 st.write('## :green[The Status is Won] ')
             else:
                 st.write('## :red[The status is Lost] ')
